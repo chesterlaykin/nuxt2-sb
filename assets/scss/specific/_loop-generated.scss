@@ -1,0 +1,59 @@
+/*
+
+	---Loop generated classes---
+
+	Using "@each", creates several variants of each rule
+
+*/
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+  
+$quarterWidths: (25,50,75,100);
+  
+@each $breakpointName, $breakpointMinWidth in $grid-breakpoints { 
+  
+    @media (min-width: $breakpointMinWidth) {
+
+        @if $breakpointName == 'xs' {
+
+            .flex-nowrap{
+                flex-wrap: nowrap;
+            }
+            .wsnowrap{
+                white-space: nowrap;
+            }
+        } @else {
+
+            //Single values
+            .flex-nowrap-#{$breakpointName} {
+                flex-wrap: nowrap;
+            } 
+            .wsnowrap-#{$breakpointName} {
+                white-space: nowrap;
+            }
+        }
+      
+    }
+
+    @each $quarterWidth in $quarterWidths{	
+ 
+        /* Classes for min-width at different screen widths
+        Example:  .mw-md-25         //<-- 'md'-size and upwards         */
+        
+        @media (min-width: $breakpointMinWidth) {
+            .mw-#{$breakpointName}-#{$quarterWidth} { 						 
+                min-width: $quarterWidth * 1%;
+            }
+        }
+    }
+ 
+}
+
+
+ 	
+ 

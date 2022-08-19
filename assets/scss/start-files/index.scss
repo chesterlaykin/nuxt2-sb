@@ -1,0 +1,18 @@
+
+@import "../bootstrap5.2/functions.scss";
+@import '../bootstrap5.2/variables.scss';
+@import "../bootstrap5.2/maps";
+@import "../bootstrap5.2/mixins";
+@import "../bootstrap5.2/utilities";
+
+@import '../bootstrap5.2/reboot.scss';
+
+@import '../bootstrap5.2/containers.scss';
+
+@import '../specific/loop-generated.scss';
+@import '../specific/breakpoints.scss';
+@import '../specific/variables.scss';
+@import '../independent/mixins.scss';
+@import '../main.scss';
+
+@import '../specific/bootstrap-overwrites.scss';
